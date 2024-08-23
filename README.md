@@ -1,14 +1,14 @@
 # Inception `100/100`
 
-<!--
+
 <p align="center">
-  <img src="https://github.com/pin3dev/42_Cursus/blob/a708c0de6d3fdc729bb720318b5d35bdaa9551c0/" width="600" height="375" />
+  <img src="https://github.com/pin3dev/42_Cursus/blob/a5d29b4a62cf51ed4d530307677175eb753b6afd/assets/Inception/Tutorial/Inception_Runing.gif" width="600" height="375" />
 </p>
 
 <p align="center">
   <a href="https://github.com/pin3dev/42_Inception/wiki">🚢---TUTORIAL---🚢</a>
 </p>
--->
+
 
 ## Table of Contents
 - [Project Overview](#overview)
