@@ -109,6 +109,5 @@ SELECT * FROM <table_name>;
 | ⭐⭐ |  🇺🇸 |  📄 | [42 Inception Guide - Part 1](https://medium.com/@ssterdev/inception-guide-42-project-part-i-7e3af15eb671) |  
 | ⭐⭐ |  🇺🇸 |  📄 | [42 Inception Guide - Part 2](https://medium.com/@ssterdev/inception-42-project-part-ii-19a06962cf3b) |  
 
-https://inception-project.github.io/releases/31.3/docs/admin-guide.html
 > ✅ OK | ⭐ Good | ⭐⭐ VeryGood | 🤩 Amazing | 🔖 Bookmarked2Read  
 > 📄 Blog | 💭 Chat | 📹 Video | 📚 Book & Scientific Papers   
