@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   nginx:
-    image: nginx
+    image: nginx:v1.0
     build: 
       context: requirements/nginx/.
       args:
@@ -26,7 +26,7 @@ services:
     volumes:
       - v_web:/var/www/html
   wordpress:
-    image: wordpress
+    image: wordpress:v1.0
     build: requirements/wordpress/.
     container_name: wordpress
     restart: on-failure
@@ -41,7 +41,7 @@ services:
     env_file:
       - .env
   mariadb:
-    image: mariadb
+    image: mariadb:v1.0
     build: requirements/mariadb/.
     container_name: mariadb
     restart: on-failure
