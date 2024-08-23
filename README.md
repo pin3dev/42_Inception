@@ -104,8 +104,11 @@ SELECT * FROM <table_name>;
 ## Links to Study
 | Grade | Lang | Type | Links and Subjects |
 |:----:|:----:|:----:|:------------------|
-| 🤩  |  🇺🇸 | 🔖  | [Debian Versions](https://www.debian.org/releases/) |  
+| ⭐  |  🇺🇸 | 🔖  | [Debian Versions](https://www.debian.org/releases/) |  
 |  ✅ |  🇺🇸 |  📚 | [Docker Concepts](https://container.training/intro-selfpaced.yml.html#1) |  
+| ⭐⭐ |  🇺🇸 |  📄 | [42 Inception Guide - Part 1](https://medium.com/@ssterdev/inception-guide-42-project-part-i-7e3af15eb671) |  
+| ⭐⭐ |  🇺🇸 |  📄 | [42 Inception Guide - Part 2](https://medium.com/@ssterdev/inception-42-project-part-ii-19a06962cf3b) |  
 
+https://inception-project.github.io/releases/31.3/docs/admin-guide.html
 > ✅ OK | ⭐ Good | ⭐⭐ VeryGood | 🤩 Amazing | 🔖 Bookmarked2Read  
 > 📄 Blog | 💭 Chat | 📹 Video | 📚 Book & Scientific Papers   
