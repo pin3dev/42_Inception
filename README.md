@@ -109,6 +109,7 @@ SELECT * FROM <table_name>;
 | ⭐⭐ |  🇺🇸 |  📄 | [42 Inception Guide - Part 1](https://medium.com/@ssterdev/inception-guide-42-project-part-i-7e3af15eb671) |  
 | ⭐⭐ |  🇺🇸 |  📄 | [42 Inception Guide - Part 2](https://medium.com/@ssterdev/inception-42-project-part-ii-19a06962cf3b) |  
 | 🤩 |  🇧🇷 |  📹 | [Docker Essencial: Docker para Iniciantes](https://www.youtube.com/playlist?list=PLViOsriojeLrdw5VByn96gphHFxqH3O_N) |  
+| ⭐⭐ |  🇺🇸 |  📹 | [Docker](https://www.youtube.com/playlist?list=PLhW3qG5bs-L99pQsZ74f-LC-tOEsBp2rK) |  
 
 > ✅ OK | ⭐ Good | ⭐⭐ VeryGood | 🤩 Amazing | 🔖 Bookmarked2Read  
 > 📄 Blog | 💭 Chat | 📹 Video | 📚 Book & Scientific Papers   
