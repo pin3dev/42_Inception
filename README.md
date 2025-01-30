@@ -1,60 +1,103 @@
-# Inception `100/100`
+<h1 align="center">Inception</h1>
+<p align="center">
+  <img src="https://img.shields.io/badge/grade-100%2F100-green?style=for-the-badge&logo=42&labelColor=gray"/>
+</p>
 
+<p align="center">
+  <a href="https://github.com/pin3dev/42_Cursus/tree/main/library/#Inception">
+    <img src="https://img.shields.io/badge/Docker-blue?style=for-the-badge"/>
+    <img src="https://img.shields.io/badge/Containerization-blue?style=for-the-badge"/>
+    <img src="https://img.shields.io/badge/Orchestration-blue?style=for-the-badge"/>
+    <img src="https://img.shields.io/badge/Virtualization-blue?style=for-the-badge"/>
+  </a>
+</p>
 
 <p align="center">
   <img src="https://github.com/pin3dev/42_Cursus/blob/a5d29b4a62cf51ed4d530307677175eb753b6afd/assets/Inception/Tutorial/Inception_Runing.gif" width="600" height="375" />
 </p>
 
+<h3>
+  <p align="center">
+    <a href="#introduction">Introduction</a> •
+    <a href="#structure">Structure</a> •
+    <a href="#cloning">Cloning</a> •
+    <a href="#usage">Running</a> •
+    <a href="#norms">Norms</a> •
+    <a href="#theoretical">Theoretical</a> •   
+    <a href="#tutorial">Tutorial</a>  
+  </p>
+</h3>
+
+## 🗣️ Introduction <a id="introduction"></a>
+
+The **Inception** project focuses on setting up a **multi-container** system using **Docker** and **Docker Compose**. The goal is to create a **virtualized infrastructure**, managing services like **NGINX, WordPress, and MariaDB**, while ensuring security and scalability. This project provides hands-on experience with **containerization, orchestration, and networking**.
+
+## 🧬 Project Structure <a id="structure"></a>
+
+The **Inception** project follows a modular architecture where each service runs inside its **own container**:
+
+- **NGINX**: Serves as a reverse proxy and handles SSL/TLS encryption.
+- **WordPress**: A PHP-based CMS running with php-fpm.
+- **MariaDB**: A MySQL-compatible database engine.
+- **Docker Compose**: Manages the orchestration of all containers.
+- **Volumes**: Persistent storage for WordPress and the database.
+
+<!--
+## 🗃️ Documentation <a id="docs"></a>
+
+For detailed documentation, including usage examples and function breakdowns, please visit the link below:
+
 <p align="center">
-  <a href="https://github.com/pin3dev/42_Inception/wiki">🚢🐳---TUTORIAL---🐳🚢</a>
+  <a href="https://github.com/pin3dev/42_Inception/wiki">
+    <img src="https://img.shields.io/badge/Inception_Docs-lightgreen?style=for-the-badge"/>
+  </a>
 </p>
+-->
 
+## 🫥 Cloning the Repository <a id="cloning"></a>
 
-## Table of Contents
-- [Project Overview](#overview)
-- [Guidelines](#guidelines)
-- [Mandatory Features](#features)
-- [Execution](#execution)
-- [To Study](#links-to-study)
+To clone and set up the project, run the following commands:
 
-## Overview
-The `Inception` project involves setting up a small infrastructure using Docker and Docker Compose within a Virtual Machine, with a focus on learning how to manage multiple services—such as NGINX, WordPress, and MariaDB—each running in dedicated containers, all orchestrated by Docker Compose.
-  
-## Guidelines
+```bash
+git clone https://github.com/pin3dev/42_Inception.git
+cd 42_Inception/root
+```   
+This will download the project from GitHub into your local machine. Once inside the 42_Inception directory, you can run the project using the provided Makefile.
 
-### Setup and Structure:
+## 🕹️ Running the Project <a id="usage"></a>
 
-- All project files must be inside a `srcs` directory.
-- A `Makefile` is required at the root level to build and run the entire application.
-- Use Docker Compose to manage your services, with each service having its own `Dockerfile`.
-- Containers should use the latest stable version of `Alpine` or `Debian`.
+### Makefile
 
-### Forbidden:
+A `Makefile` is provided to simplify the running process. The Makefile includes the following rules:
 
-- Using `pre-built` Docker images from Docker Hub.
-- `Infinite loops` or hacky patches in the entrypoint of the Dockerfile.
-- Storing `passwords` or `sensitive information` directly in Dockerfiles.
+- **`build`**: Builds the Docker containers.
+- **`run`**: Starts the Docker containers in detached mode.
+- **`exec <docker name>`**: Opens an interactive shell inside a running container.
+- **`status`**: Displays logs of a specific container.
+- **`stop`**: Stops and removes all running containers.
+- **`iclean`**: Stops and removes containers along with all built images.
+- **`vclean`**: Removes containers, images, and volumes.
+- **`fclean`**: Performs a full cleanup, removing all unused containers, images, and volumes.
+- **`dls`**: Lists all Docker containers.
+- **`vls`**: Lists all Docker volumes.
+- **`ils`**: Lists all Docker images.
+- **`nls`**: Lists all Docker networks.
 
-### Allowed:
+To build and run the containers, execute:
 
-- Environment variables stored in a `.env` file.
-- `Docker secrets` for managing sensitive data.
-- Custom domain setup, e.g., `login.42.fr`, pointing to your `local IP`.
-
-## Features
-- **NGINX service**: Configured with TLSv1.2 or TLSv1.3.
-- **WordPress service**: Running with php-fpm, without NGINX.
-- **MariaDB service**: Configured separately, without NGINX.
-- TLS/SSL configured via NGINX as the single entry point through port `443`.
-- Dedicated `volumes` for WordPress files and database.
-
-## Execution
-To build and run the project, navigate to the root directory and run:
 ```bash
 make
 ```
 
-## Tests
+To stop and clean up the containers:
+```bash
+make fclean
+```
+
+### Basic Tests
+
+With the containers running you can run the tests below:
+
 **TLS/SSL:**
 ```bash
 openssl s_client -connect localhost:443
@@ -101,15 +144,38 @@ SHOW TABLES;
 SELECT * FROM <table_name>;
 ```
 
-## Links to Study
-| Grade | Lang | Type | Links and Subjects |
-|:----:|:----:|:----:|:------------------|
-| ⭐  |  🇺🇸 | 🔖  | [Debian Versions](https://www.debian.org/releases/) |  
-|  ✅ |  🇺🇸 |  📚 | [Docker Concepts](https://container.training/intro-selfpaced.yml.html#1) |  
-| ⭐⭐ |  🇺🇸 |  📄 | [42 Inception Guide - Part 1](https://medium.com/@ssterdev/inception-guide-42-project-part-i-7e3af15eb671) |  
-| ⭐⭐ |  🇺🇸 |  📄 | [42 Inception Guide - Part 2](https://medium.com/@ssterdev/inception-42-project-part-ii-19a06962cf3b) |  
-| 🤩 |  🇧🇷 |  📹 | [Docker Essencial: Docker para Iniciantes](https://www.youtube.com/playlist?list=PLViOsriojeLrdw5VByn96gphHFxqH3O_N) |  
-| ⭐⭐ |  🇺🇸 |  📹 | [Docker](https://www.youtube.com/playlist?list=PLhW3qG5bs-L99pQsZ74f-LC-tOEsBp2rK) |  
+## ⚠️ Norms and Guidelines <a id="norms"></a>
 
-> ✅ OK | ⭐ Good | ⭐⭐ VeryGood | 🤩 Amazing | 🔖 Bookmarked2Read  
-> 📄 Blog | 💭 Chat | 📹 Video | 📚 Book & Scientific Papers   
+This project strictly follows the [**42 School Norm**](https://github.com/pin3dev/42_Cursus/blob/b9cd0fe844ddb441d0b3efb98abcee92aee49535/assets/General/norme.en.pdf) coding guidelines, which significantly influenced certain decisions in its implementation. These rules may sometimes lead to seemingly inefficient or unusual solutions, but they were necessary to meet the strict requirements of the school. 
+
+## 📚 Theoretical Background <a id="theoretical"></a>
+
+All the theoretical material used to develop this project is organized and can be accessed directly via the link below:
+
+<p align="center">
+  <a href="https://github.com/pin3dev/42_Cursus/tree/main/library/#Inception">
+    <img src="https://img.shields.io/badge/Inception_Library-gray?style=for-the-badge"/>
+  </a>
+</p>
+
+## 🔬 Tutorial <a id="tutorial"></a>
+
+A step-by-step tutorial is available and can be followed to complete the project. It is linked in the button below.
+
+<p align="center">
+  <a href="https://github.com/pin3dev/42_Inception/wiki">
+    <img src="https://img.shields.io/badge/Inception_Tutorial-lightgreen?style=for-the-badge"/>
+  </a>
+</p>
+
+<!--
+## 👥 Contributors <a id="contributors"></a>
+
+<a href="https://github.com/pin3dev">
+  <img src="https://img.shields.io/badge/Ivany_Pinheiro-%40pin3dev-purple?style=for-the-badge"/>  
+</a>  
+<br>
+<a href="https://github.com/clima-fr">
+  <img src="https://img.shields.io/badge/Clara_Franco-%40clima--fr-purple?style=for-the-badge"/>  
+</a>
+-->
