@@ -153,7 +153,7 @@ This project strictly follows the [**42 School Norm**](https://github.com/pin3de
 All the theoretical material used to develop this project is organized and can be accessed directly via the link below:
 
 <p align="center">
-  <a href="https://github.com/pin3dev/42_Cursus/tree/main/library/#Inception">
+  <a href="https://github.com/pin3dev/42_Cursus/blob/main/library/README.md#05-inception">
     <img src="https://img.shields.io/badge/Inception_Library-gray?style=for-the-badge"/>
   </a>
 </p>
@@ -168,14 +168,3 @@ A step-by-step tutorial is available and can be followed to complete the project
   </a>
 </p>
 
-<!--
-## 👥 Contributors <a id="contributors"></a>
-
-<a href="https://github.com/pin3dev">
-  <img src="https://img.shields.io/badge/Ivany_Pinheiro-%40pin3dev-purple?style=for-the-badge"/>  
-</a>  
-<br>
-<a href="https://github.com/clima-fr">
-  <img src="https://img.shields.io/badge/Clara_Franco-%40clima--fr-purple?style=for-the-badge"/>  
-</a>
--->
